@@ -1,4 +1,4 @@
-* {
+* { /* stylelint-disable-line */ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
 }
 
 .location,
-.temperature  {
+.temperature {
   height: 30vh;
   width: 50%;
   display: flex;
@@ -30,7 +30,7 @@ body {
 }
 
 .location > div {
- width: 99% !important;
+  width: 99% !important;
 }
 
 .location > div > input {
@@ -42,10 +42,10 @@ body {
 .button {
   width: 17%;
   padding: 0.5vw;
-  }
+}
 
 .temperature {
-  flex-direction: column ;
+  flex-direction: column;
   cursor: pointer;
 }
 

@@ -51,7 +51,6 @@ sub.addEventListener('click', (getData) => {
         const description = data.weather[0].description;
         const icon = data.weather[0].icon;
         display(city, t, description, icon);
-        
-    });
+      });
   }
 });
