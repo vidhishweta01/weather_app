@@ -48,8 +48,9 @@ sub.addEventListener('click', (getData) => {
         const temp = data.main.temp;
         let t = parseInt(temp) - 273;
         t = t.toString();
-        const description = data.weather[0].description;
-        const icon = data.weather[0].icon;
+        const arr = data.weather;
+        const description = arr[0].description;
+        const icon = arr[0].icon;
         display(city, t, description, icon);
       });
   }
