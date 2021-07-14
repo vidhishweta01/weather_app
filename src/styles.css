@@ -20,7 +20,7 @@ body {
   height: 30vh;
   width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .location > div {
-  width: 98%;
+ width: 99% !important;
 }
 
 .location > div > input {
@@ -39,14 +39,14 @@ body {
   padding: 0.5vw;
 }
 
-/* .submit,
-. {
+.button {
   width: 17%;
   padding: 0.5vw;
-  } */
+  }
 
 .temperature {
   flex-direction: column ;
+  cursor: pointer;
 }
 
 .degree-section {
@@ -59,6 +59,11 @@ body {
   font-size: 30px;
 }
 
+img {
+  width: 120px;
+}
+
 .temperature-degree {
   font-size: 40px;
+  cursor: pointer;
 }
