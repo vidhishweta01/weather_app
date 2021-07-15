@@ -1,6 +1,6 @@
 import content from './module/dom';
 import './styles.css';
-import myAPI from './config.js';
+import myAPI from './config'; // eslint-disable-line
 
 content();
 
