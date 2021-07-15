@@ -10,7 +10,7 @@ const display = (city, temp, description, icon) => {
   const temprature = document.querySelector('.temperature-degree');
   temprature.innerHTML = temp;
   if (document.querySelector('.temperature-unit').textContent === 'F')
-  document.querySelector('.temperature-unit').innerText = 'C';
+    document.querySelector('.temperature-unit').innerText = 'C';
   const desc = document.querySelector('.temperature-description');
   desc.textContent = description;
   const icons = document.querySelector('.icon');
@@ -24,28 +24,23 @@ const display = (city, temp, description, icon) => {
       document.querySelector('.temperature-degree').innerText = t1.toString();
     } else if (document.querySelector('.temperature-unit').textContent === 'F') {
       document.querySelector('.temperature-unit').innerText = 'C';
-      let t1 = (t - 32) * 5 / 9;
+      let t1 = ((t - 32) * 5) / 9;
       t1 = Math.floor(t1);
       document.querySelector('.temperature-degree').innerText = t1.toString();
     }
-
   });
-} 
+};
 
 const sub = document.querySelector('.button');
 sub.addEventListener('click', (getData) => {
   getData.preventDefault();
   const city = document.querySelector('input').value;
   if (city !== '') {
-    //const proxy = `https://cors-anywhere.herokuapp.com/`;
     const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=97f4620476b2375660538fec7c9a5a92`;
     fetch(wheatherReport)
-      .then(response => {
-        return response.json();
-      })
+      .then(response => { return response.json(); })
       .then(data => {
-        console.log(data);
-        const temp = data.main.temp;
+        const temp = data.main.temp; // eslint-disable-line
         let t = parseInt(temp) - 273;
         t = t.toString();
         const description = data.weather[0].description; // eslint-disable-line
