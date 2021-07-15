@@ -1,4 +1,4 @@
-const content = () => {
+export default function content() {
   const div = document.createElement('div');
   div.setAttribute('class', 'location');
   const h1 = document.createElement('h1');
@@ -32,6 +32,4 @@ const content = () => {
   div4.setAttribute('class', 'temperature-description');
   div2.append(city, div3, p, div4);
   document.body.append(div, div2);
-};
-
-export { content };
+}
