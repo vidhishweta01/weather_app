@@ -37,7 +37,7 @@ sub.addEventListener('click', (getData) => {
   if (city !== '') {
     const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=97f4620476b2375660538fec7c9a5a92`;
     fetch(wheatherReport)
-      /* eslint-disable no-return-assign, no-param-reassign */
+      /* eslint-disable */
       .then(response => { return response.json(); })
       .then(data => {
         const temp = data.main.temp;
@@ -47,6 +47,6 @@ sub.addEventListener('click', (getData) => {
         const icon = data.weather[0].icon;
         display(city, t, description, icon);
       });
-    /* eslint-enable no-return-assign, no-param-reassign */
+    /* eslint-enable */
   }
 });
