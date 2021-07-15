@@ -12,7 +12,7 @@ javascript
 
 ## Live Demo
 
-[Try a lıve demo](https://vidhishweta01.github.io/todo_list/)
+[Try a lıve demo](https://vidhishweta01.github.io/weather_app/)
 
 ## Getting Started
 
