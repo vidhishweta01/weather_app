@@ -1,6 +1,6 @@
 import content from './module/dom';
 import './styles.css';
-import myAPI from './config'; // eslint-disable-line
+import { mypi } from './config'; // eslint-disable-line
 
 content();
 
@@ -36,7 +36,7 @@ sub.addEventListener('click', (getData) => {
   getData.preventDefault();
   const city = document.querySelector('input').value;
   if (city !== '') {
-    const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myAPI()}`;
+    const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${mypi}`;
     fetch(wheatherReport)
       /* eslint-disable */
       .then(response => { return response.json(); })
