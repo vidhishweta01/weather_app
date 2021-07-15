@@ -1,5 +1,6 @@
 import content from './module/dom';
 import './styles.css';
+import myAPI from './config.js';
 
 content();
 
@@ -35,7 +36,7 @@ sub.addEventListener('click', (getData) => {
   getData.preventDefault();
   const city = document.querySelector('input').value;
   if (city !== '') {
-    const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=97f4620476b2375660538fec7c9a5a92`;
+    const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myAPI()}`;
     fetch(wheatherReport)
       /* eslint-disable */
       .then(response => { return response.json(); })
