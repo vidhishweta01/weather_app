@@ -22,7 +22,7 @@ do follow these steps given below:
 
 # $ cd waether_app
 
-2. install all dev dependencies
+2. install all development dependencies
 
 ## $ npm istall
 
