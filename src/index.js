@@ -33,7 +33,7 @@ const display = (city, temp, description, icon) => {
 
 const cross = () => {
   document.getElementById('id01').style.display = 'none';
-  location.reload();
+  location.reload(); // eslint-disable-line
 };
 
 async function Getdata(getData) {
