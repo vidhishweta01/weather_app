@@ -31,16 +31,29 @@ const display = (city, temp, description, icon) => {
   });
 };
 
-const sub = document.querySelector('.button');
-sub.addEventListener('click', (getData) => {
+const cross = () => {
+  document.getElementById('id01').style.display = 'none';
+  location.reload();
+};
+
+async function Getdata(getData) {
   getData.preventDefault();
   const city = document.querySelector('input').value;
-  if (city !== '') {
+  if (city == '') {
+    location.reload();
+  } else {
     const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${mypi}`;
-    fetch(wheatherReport)
-      /* eslint-disable */
+    let res = await fetch(wheatherReport);
+    if (!res.ok) {
+      const element = document.getElementById('id01');
+      element.style.display = 'block';
+      const sp = document.querySelector('.cross');
+      sp.addEventListener('click', cross);
+    } else {
+      fetch(wheatherReport)    /* eslint-disable */
       .then(response => { return response.json(); })
-      .then(data => {
+        .then(data => {
+          console.log(data);
         const temp = data.main.temp;
         let t = parseInt(temp) - 273;
         t = t.toString();
@@ -49,5 +62,9 @@ sub.addEventListener('click', (getData) => {
         display(city, t, description, icon);
       });
     /* eslint-enable */
+    }
   }
-});
+}
+
+const sub = document.querySelector('.button');
+sub.addEventListener('click', Getdata);

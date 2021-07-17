@@ -32,4 +32,22 @@ export default function content() {
   div4.setAttribute('class', 'temperature-description');
   div2.append(city, div3, p, div4);
   document.body.append(div, div2);
+
+  const element = document.createElement('div');
+    element.setAttribute('id', 'id01');
+    element.setAttribute('class', 'modal');
+    const modalContent = document.createElement('div');
+    modalContent.setAttribute('class', 'modal-content');
+    const contain = document.createElement('div');
+    contain.setAttribute('class', 'contain');
+    const spa = document.createElement('span');
+    spa.setAttribute('class', 'cross display-top-right');
+    spa.innerHTML = '&times;';
+    const par = document.createElement('div');
+    par.setAttribute('class', 'conten');
+    par.innerHTML = 'Please enter correct city';
+    contain.append(spa, par);
+    modalContent.append(contain);
+    element.append(modalContent);
+    document.body.append(element);
 }
