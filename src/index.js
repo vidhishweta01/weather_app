@@ -38,19 +38,21 @@ const cross = () => {
 
 async function Getdata(getData) {
   getData.preventDefault();
+  const element = document.getElementById('id01');
+  const sp = document.querySelector('.cross');
   const city = document.querySelector('input').value;
-  if (city == '') {
-    location.reload();
+  if (city === '') {
+    element.style.display = 'block';
+    sp.addEventListener('click', cross);
   } else {
     const wheatherReport = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${mypi}`;
-    let res = await fetch(wheatherReport);
+    const res = await fetch(wheatherReport);
     if (!res.ok) {
-      const element = document.getElementById('id01');
       element.style.display = 'block';
-      const sp = document.querySelector('.cross');
       sp.addEventListener('click', cross);
     } else {
-      fetch(wheatherReport)    /* eslint-disable */
+      fetch(wheatherReport)
+      /* eslint-disable */
       .then(response => { return response.json(); })
         .then(data => {
           console.log(data);
