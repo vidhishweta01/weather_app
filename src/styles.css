@@ -10,7 +10,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  background: linear-gradient(rgb(191, 209, 211), rgb(11, 194, 201));
   font-family: sans-serif;
   color: white;
 }
@@ -60,7 +60,7 @@ body {
 }
 
 img {
-  width: 120px;
+  width: 160px;
 }
 
 .temperature-degree {

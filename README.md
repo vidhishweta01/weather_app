@@ -1,8 +1,8 @@
 # weather_app
 
-![Screenshot](./asset/Screenshot1.png)
+![Screenshot](./assets/Screenshot1.png)
 
-![Screenshot](./asset/Screenshot2.png)
+![Screenshot](./assets/Screenshot2.png)
 
 Weather app getting the data from OpenWeatherMap API, display the weather according to the user selection to a city.
 
