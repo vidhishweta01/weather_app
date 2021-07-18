@@ -1,10 +1,10 @@
 # weather_app
+This app seeks desired city weather conditions such as temperature, weather summary and displays it. You can toggle to and fro from C to F in temperature
+Weather app pulls from the OpenWeatherMap API to allow users to search for and view the forecast in cities worldwide. Built with JavaScript.
 
 ![Screenshot](./assets/Screenshot1.png)
 
 ![Screenshot](./assets/Screenshot2.png)
-
-Weather app getting the data from OpenWeatherMap API, display the weather according to the user selection to a city.
 
 ## Built With
 
