@@ -10,10 +10,6 @@ Weather app pulls from the OpenWeatherMap API to allow users to search for and v
 
 javascript
 
-## Live Demo
-
-[Try a lıve demo](https://vidhishweta01.github.io/weather_app/)
-
 ## Getting Started
 
 Download or clone this repo by using :
